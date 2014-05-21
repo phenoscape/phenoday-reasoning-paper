@@ -6,6 +6,7 @@ import java.io.InputStreamReader
 import org.phenoscape.kb.matrix.ConstructPresenceAbsenceMatrix
 import org.apache.commons.io.IOUtils
 import org.apache.commons.io.FileUtils
+import org.phenoscape.kb.matrix.reports.CountPopulatedCells
 
 object Main extends App {
 
@@ -22,7 +23,9 @@ object Main extends App {
   val vertebrataID = "<http://purl.obolibrary.org/obo/VTO_0000007>"
   FileUtils.writeStringToFile(new File(anatomyExpressionPath), anatomicalStructureID, "utf-8")
   FileUtils.writeStringToFile(new File(taxonomyExpressionPath), vertebrataID, "utf-8")
+  val nexmlPath = "presence-absence-matrix.xml"
   ConstructPresenceAbsenceMatrix.main(Array(
-    "--all", propertiesFile.getAbsolutePath, bigdataJournal.getAbsolutePath, tboxFile.getAbsolutePath, anatomyExpressionPath, taxonomyExpressionPath, "presence-absence-matrix.xml"))
+    "--all", propertiesFile.getAbsolutePath, bigdataJournal.getAbsolutePath, tboxFile.getAbsolutePath, anatomyExpressionPath, taxonomyExpressionPath, nexmlPath))
+  CountPopulatedCells.main(Array(nexmlPath))
 
 }
