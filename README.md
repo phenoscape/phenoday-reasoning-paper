@@ -1,6 +1,7 @@
 ##About##
-Demonstration code for paper submission to the Bio-ontologies SIG Phenotype Day at ISMB 2014: 
-Presence-absence reasoning for evolutionary phenotypes
+Demonstration code for paper submission to the Bio-ontologies SIG Phenotype Day at ISMB 2014:
+
+Presence-absence reasoning for evolutionary phenotypes  
 James P. Balhoff, T. Alexander Dececchi, Paula M. Mabee, and Hilmar Lapp
 
 This paper explains the reasoning process used to infer presence and absence of anatomical structures within the Phenoscape Knowledgebase. The process involves generation and addition of supplemental axioms, as well as reasoning workarounds for classifying absences using the ELK reasoner. 
@@ -20,4 +21,4 @@ This script downloads a pre-packaged Java jar which includes all dependencies.
 ##Building from source##
 Compiling the example source requires a Maven installation. Check out the source code using Git: `git clone https://github.com/phenoscape/phenoday-reasoning-paper.git`
 
-From within the source directory, run `mvn package`. This will output two jar files: one containing code for this project, the other ("one-jar") containing this code as well as all dependencies.
+From within the source directory, run `mvn package`. This will output two jar files within the `target` folder: one containing code for this project, the other ("one-jar") containing this code as well as all dependencies.
