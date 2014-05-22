@@ -13,7 +13,7 @@ As an application example the paper describes automated generation of a characte
 
 This project implements a simple workflow which builds the Knowledgebase, performs the presence-absence matrix query, and prints some summary information.
 
-##Requirements##
+##Running##
 You can run the example by downloading and executing the script `run.sh`. This requires a Unix environment (e.g. Mac OS X or Linux) with Java 7 and a large amount of memory (we tested with 30 GB).
 
 This script downloads a pre-packaged Java jar which includes all dependencies.
