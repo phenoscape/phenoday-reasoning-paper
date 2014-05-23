@@ -32,4 +32,4 @@ Compiling the example source requires a Maven installation. Check out the source
 $ git clone https://github.com/phenoscape/phenoday-reasoning-paper.git
 ```
 
-From within the source directory, run `mvn package`. This will output two jar files within the `target` folder: one containing code for this project, the other ("one-jar") containing this code as well as all dependencies.
+From within the source directory, run `mvn package`. This will output two jar files within the `target` folder: one containing code for this project, the other ("one-jar") containing this code as well as all dependencies (which will be downloaded, so an active internet connection is required).
