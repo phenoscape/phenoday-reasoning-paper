@@ -25,12 +25,14 @@
 ## --memory=<mem>, with the default being 30G.                         #
 ########################################################################
 
+version="1.1.1"
+
 # The dataset to be used, as a URL. Default is the one reported in the
 # paper. The dataset will be downloaded by the script.
 dataset='https://raw.githubusercontent.com/phenoscape/phenoscape-data/phenoday-2014/Curation%20Files/fin_limb-incomplete-files/Amphibians%20and%20transitional/Ruta_2011.xml'
 
 # The JAR file containing the main program and all dependencies
-onejar=phenoday-reasoning-paper-1.0.one-jar.jar
+onejar="phenoday-reasoning-paper-$version.one-jar.jar"
 
 # We run from pre-built JAR by default
 prebuilt=yes
@@ -71,7 +73,7 @@ if [ $prebuilt == "no" ] ; then
 else
     # Download a precompiled jar of all code packaged with dependencies
     echo "Downloading prebuilt JAR"
-    curl -O -L https://github.com/phenoscape/phenoday-reasoning-paper/releases/download/v1.0/phenoday-reasoning-paper-1.0.one-jar.jar
+    curl -O -L "https://github.com/phenoscape/phenoday-reasoning-paper/releases/download/v$version/phenoday-reasoning-paper-$version.one-jar.jar"
 fi
 
 # Download the dataset used within the paper
