@@ -22,6 +22,8 @@ You can run the example by downloading and executing the script `run.sh`. This r
 
 This script downloads a pre-packaged Java jar which includes all dependencies.
 
+You can edit the `run.sh` script to use a different data file than the default one (which is the one for which we report results in the paper). The [Phenoscape data repository](https://github.com/phenoscape/phenoscape-data) on Github contains many more NeXML files (`.xml`) with EQ phenotype annotations for published matrices.
+
 Building from source
 --------------------
 
