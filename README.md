@@ -39,6 +39,6 @@ To trigger a build from source instead of with the prebuilt JAR, pass `--from-so
 $ git clone https://github.com/phenoscape/phenoday-reasoning-paper.git
 ```
 
-You then run `run.sh --from-source` From within the source directory. This will generate two jar files within the `target` folder (which will be created): one containing code for this project, the other ("one-jar") containing this code as well as all dependencies. The build process will download these dependencies, so an active internet connection is required.
+You then run `run.sh --from-source` from within the source directory. This will generate two jar files within the `target` folder (which will be created): one containing code for this project, the other ("one-jar") containing this code as well as all dependencies. The build process will download these dependencies, so an active internet connection is required.
 
 [Phenoscape data repository]: https://github.com/phenoscape/phenoscape-data
