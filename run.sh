@@ -17,9 +17,12 @@
 ## command line.                                                       #
 ##                                                                     #
 ## By default, the script will run with the dataset reported in the    #
-## paper. Use -d|--dataset=<dataset-URL> to use another dataset (as    #
-## URL to a NeXML-formatted file), or provide it as the last command   #
-## line argument.                                                      #
+## paper. Use --dataset=<dataset-URL> to use another dataset (as URL   #
+## to a NeXML-formatted file), or provide it as the last command line  #
+## argument.                                                           #
+##                                                                     #
+## Finally, you can specify a different memory allocation for Java by  #
+## --memory=<mem>, with the default being 30G.                         #
 ########################################################################
 
 # The dataset to be used, as a URL. Default is the one reported in the
@@ -32,6 +35,9 @@ onejar=phenoday-reasoning-paper-1.0.one-jar.jar
 # We run from pre-built JAR by default
 prebuilt=yes
 
+# We allocate 30G RAM by default
+mem="30G"
+
 # parse command line
 for arg in "$@" ; do
     case $arg in
@@ -41,6 +47,10 @@ for arg in "$@" ; do
         ;;
     --from-source)
         prebuilt=no
+        shift
+        ;;
+    -m=*|--memory=*)
+        mem="${arg#*=}"
         shift
         ;;
     *)
@@ -69,4 +79,4 @@ echo "Downloading dataset from $dataset"
 curl -L -o dataset.xml "$dataset"
 
 # Running the jar will execute the workflow in Main.scala
-java -Xmx30G -jar $onejar dataset.xml
+java -Xmx$mem -jar $onejar dataset.xml
