@@ -25,6 +25,9 @@ This script downloads a pre-packaged Java jar which includes all dependencies.
 Building from source
 --------------------
 
-Compiling the example source requires a Maven installation. Check out the source code using Git: `git clone https://github.com/phenoscape/phenoday-reasoning-paper.git`
+Compiling the example source requires a Maven installation. Check out the source code using Git: 
+```
+$ git clone https://github.com/phenoscape/phenoday-reasoning-paper.git
+```
 
 From within the source directory, run `mvn package`. This will output two jar files within the `target` folder: one containing code for this project, the other ("one-jar") containing this code as well as all dependencies.
