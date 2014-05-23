@@ -25,7 +25,7 @@
 ## --memory=<mem>, with the default being 30G.                         #
 ########################################################################
 
-version="1.1.1"
+version="1.1.2"
 
 # The dataset to be used, as a URL. Default is the one reported in the
 # paper. The dataset will be downloaded by the script.
