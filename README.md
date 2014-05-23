@@ -20,16 +20,25 @@ Running
 
 You can run the example by downloading and executing the script `run.sh`. This requires a Unix environment (e.g. Mac OS X or Linux) with Java 7 and a large amount of memory (we tested successfully with 30 GB).
 
-This script downloads a pre-packaged Java jar which includes all dependencies.
+By default, this script downloads a pre-built and pre-packaged Java jar which includes all dependencies, and it will run with the dataset reported in the paper.
 
-You can edit the `run.sh` script to use a different data file than the default one (which is the one for which we report results in the paper). The [Phenoscape data repository](https://github.com/phenoscape/phenoscape-data) on Github contains many more NeXML files (`.xml`) with EQ phenotype annotations for published matrices.
+The defaults can be changed by passing command line argument to the
+script. Use `--dataset=<dataset-URL>` to use another dataset (as URL
+to a NeXML-formatted file), or provide it as the last command line
+argument. The [Phenoscape data repository] on Github contains many
+more NeXML files (`.xml`) with EQ phenotype annotations for published
+matrices. To change the default heap memory allocation for Java (30G)
+use `--memory=<mem>`.
 
-Building from source
---------------------
+Running from source
+-------------------
 
-Compiling the example source requires a Maven installation. Check out the source code using Git: 
+To trigger a build from source instead of with the prebuilt JAR, pass `--from-source` to `run.sh` on the command line. This requires a Maven installation, and checking out the source code using Git: 
+
 ```
 $ git clone https://github.com/phenoscape/phenoday-reasoning-paper.git
 ```
 
-From within the source directory, run `mvn package`. This will output two jar files within the `target` folder: one containing code for this project, the other ("one-jar") containing this code as well as all dependencies (which will be downloaded, so an active internet connection is required).
+You then run `run.sh --from-source` From within the source directory. This will generate two jar files within the `target` folder (which will be created): one containing code for this project, the other ("one-jar") containing this code as well as all dependencies. The build process will download these dependencies, so an active internet connection is required.
+
+[Phenoscape data repository]: https://github.com/phenoscape/phenoscape-data
